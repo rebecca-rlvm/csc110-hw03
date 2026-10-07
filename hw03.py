@@ -34,7 +34,7 @@ def read_five_ints():
            print ("Error in read_five_ints: input string is not for an integer")
            exit()
         n = int(n)
-        if 1 <= n <= 10 == False:
+        if 1 >= n or n >= 10:
             print ("Error in read_five_ints: input integer outside of range")
             exit()
         grades[idx] = n
