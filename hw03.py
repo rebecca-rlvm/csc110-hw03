@@ -34,7 +34,7 @@ def read_five_ints():
             print ("Error in read_five_ints: input string is not for an integer")
             exit()
         n = int(n)
-        if 1 >= n or n >= 10:
+        if 1 > n or n > 10:
             print ("Error in read_five_ints: input integer outside of range")
             exit()
         grades[idx] = n
@@ -53,8 +53,23 @@ def pick_averaging_method():
     Any other input prints
     'Error in pick_averaging_method: incorrect option picked'.
     """
-    pass
-
+    x = input("Pick 'a' for mean, 'b' for median, 'c' for mode: ")
+    if x == "a":
+        print("picked: Mean")
+        avg = statistics.mean(grades)
+        return avg
+    elif x == "b":
+        print("picked: Median")
+        avg = statistics.median(grades)
+        return avg
+    elif x == "c":
+        print("picked: Mode")
+        avg = statistics.mode(grades)
+        return avg
+    else:
+        print("Error in pick_averaging_method: incorrect option picked")
+        exit()
+    
 # Task 3:
 #  Complete the function "pick_visualization" below:
 def pick_visualization(average):
